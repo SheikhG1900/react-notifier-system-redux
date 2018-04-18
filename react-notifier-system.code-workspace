@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "E:\\work\\nodejs\\aw_modules\\npm\\react-notifier-system-npm"
+		}
+	],
+	"settings": {
+		"javascript.validate.enable": false
+	}
+}

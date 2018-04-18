@@ -1,0 +1,18 @@
+{
+  "presets": [
+    "env",
+    "flow",
+    "react",
+    "es2015",
+    "stage-0"
+  ],
+  "plugins": [
+    "flow-react-proptypes",
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "_shared": "./src/shared"
+      }
+    }]
+  ]
+}

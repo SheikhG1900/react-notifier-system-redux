@@ -1,0 +1,9 @@
+.DS_Store
+/*.log
+node_modules/
+/coverage/
+/lib/
+/dist/
+package-lock.json
+# Heroku (remove if you're using the no-service boilerplate)
+/.env
