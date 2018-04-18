@@ -3,9 +3,9 @@ import * as React from 'react'
 import Notifier from 'react-notifier-system'
 import { connect } from 'react-redux'
 import { actionTypes } from '../../redux/redux-const'
+
 export const WrappedNotifier = class extends React.Component<{notifications: [], dispatch: Function}> {
-  componentDidUpdate(prevProps) {
-    console.log('componentDidUpdate')
+  componentDidUpdate(prevProps: any) {
     if (this.props.notifications && this.props.notifications.length > 0
         && prevProps.notifications !== this.props.notifications) {
       this.props.dispatch({ type: actionTypes.REST })
@@ -24,7 +24,6 @@ export const WrappedNotifier = class extends React.Component<{notifications: [],
 
   notifier: any;
   render() {
-    console.log('render')
     return <Notifier ref={notifier => (this.notifier = notifier)} />
   }
 }

@@ -25,7 +25,7 @@
     "test-jest": "jest --coverage",
     "test-flow": "flow",
     "test": "yarn lint && yarn test-flow && yarn test-jest && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "precommit": "yarn test",
+    "precommit": "yarn lint && yarn test-flow && yarn test-jest",
     "prepush": "yarn test && yarn prod:build"
   },
   "dependencies": {
