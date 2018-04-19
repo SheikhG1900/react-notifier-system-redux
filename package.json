@@ -24,7 +24,7 @@
     "lint": "eslint src webpack.config.babel.js --ext .js,.jsx",
     "test-jest": "jest --coverage",
     "test-flow": "flow",
-    "test": "yarn lint && yarn test-flow && yarn test-jest",
+    "test": "yarn lint && yarn test-flow && yarn test-jest  && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "precommit-notused": "yarn lint && yarn test-flow && yarn test-jest",
     "prepush-notused": "yarn lint && yarn test-flow && yarn test-jest && yarn prod:build"
   },
