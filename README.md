@@ -1,20 +1,16 @@
 # React Notifier System
 
-[![npm version](https://badge.fury.io/js/react-notifier-system.svg)](https://badge.fury.io/js/react-notifier-system) [![Dependency Status](https://david-dm.org/sheikhG1900/react-notifier-system.svg)](https://david-dm.org/sheikhG1900/react-notifier-system) [![devDependency Status](https://david-dm.org/sheikhG1900/react-notifier-system/dev-status.svg)](https://david-dm.org/sheikhG1900/react-notifier-system#info=devDependencies) [![Build Status](https://travis-ci.org/SheikhG1900/react-notifier-system.svg?branch=master)](https://travis-ci.org/SheikhG1900/react-notifier-system) [![Coverage Status](https://coveralls.io/repos/github/SheikhG1900/react-notifier-system/badge.svg?branch=master)](https://coveralls.io/github/SheikhG1900/react-notifier-system?branch=master)
+[![npm version](https://badge.fury.io/js/react-notifier-system-redux.svg)](https://badge.fury.io/js/react-notifier-system-redux) [![Dependency Status](https://david-dm.org/sheikhG1900/react-notifier-system-redux.svg)](https://david-dm.org/sheikhG1900/react-notifier-system-redux) [![devDependency Status](https://david-dm.org/sheikhG1900/react-notifier-system-redux/dev-status.svg)](https://david-dm.org/sheikhG1900/react-notifier-system-redux#info=devDependencies) [![Build Status](https://travis-ci.org/SheikhG1900/react-notifier-system-redux.svg?branch=master)](https://travis-ci.org/SheikhG1900/react-notifier-system-redux) [![Coverage Status](https://coveralls.io/repos/github/SheikhG1900/react-notifier-system-redux/badge.svg?branch=master)](https://coveralls.io/github/SheikhG1900/react-notifier-system-redux?branch=master)
 
-> An extension of [react-notification-system](https://github.com/igorprado/react-notification-system) for showing notifications with much simpler approach.
+> Redux implementation of [react-notifier-system](https://github.com/sheikhG1900/react-notifier-system).
 
 <a href="https://igorprado.github.io/react-notification-system/"><img width="728" src="https://github.com/igorprado/react-notification-system/raw/master/example/src/images/screenshot.jpg" alt="Screenshot"></a>
 
 ## Installing
 
 ```
-npm install react-notifier-system
+npm install react-notifier-system-redux
 ```
-
-### Important
-
-For complete documentation, please go to [react-notification-system](https://github.com/igorprado/react-notification-system).
 
 ## Using
 
