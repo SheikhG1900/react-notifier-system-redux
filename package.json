@@ -25,8 +25,8 @@
     "test-jest": "jest --coverage",
     "test-flow": "flow",
     "test": "yarn lint && yarn test-flow && yarn test-jest",
-    "precommit": "yarn lint && yarn test-flow && yarn test-jest",
-    "prepush": "yarn lint && yarn test-flow && yarn test-jest && yarn prod:build"
+    "precommit-notused": "yarn lint && yarn test-flow && yarn test-jest",
+    "prepush-notused": "yarn lint && yarn test-flow && yarn test-jest && yarn prod:build"
   },
   "dependencies": {
     "enzyme-adapter-react-16": "^1.1.1",
