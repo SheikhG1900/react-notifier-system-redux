@@ -14,41 +14,42 @@ npm install react-notifier-system-redux
 
 ## Using
 
-For optimal appearance, this component **must be rendered on a top level HTML element** in your application to avoid position conflicts.
+### redux store configuration
+```js
+import {createStore, combineReducers} from 'redux';
+import {reducer as notifications} from 'react-notification-system-redux';
 
+export function configureStore(initialState = {}) {
+  return createStore(
+    combineReducers({
+      
+      // storeKey. You can keep it as you want. Its default value is "notifications" 
+      notifications,
+      .....,
+      ...
+
+    }),
+    initialState
+  );
+}
+```
+### add react notifier redux component
+For optimal appearance, this component **must be rendered on a top level HTML element** in your application to avoid position conflicts.
 
 ```js
 import * as React from 'react'
 import Notifier from 'react-notifier-system-redux'
 
-const App = class extends React.Component<{}> {
-  addOrUpdateMyNotification = () => this.notifier.showNotification({
-    message: 'My Notification',
-    level: 'info',
-    title: 'My Notification Title',
-    id: 'mynotification',
-  })
-
-  addNotification = () => this.notifier.showNotification({
-    message: 'New Notification',
-    level: 'info',
-    title: 'New Notification Title',
-  })
-
-  removeMyNotification = () => this.notifier.removeNotificationById('mynotification')
-
-  notifier: any
-  render() {
-    return (
-      <div>
-        <Notifier ref={notifier => this.notifier = notifier} />
-        <button onClick={this.addOrUpdateMyNotification}>Add or update my notification</button>
-        <button onClick={this.removeMyNotification}>Remove my notification</button>
-        <button onClick={this.addNotification}>Add new notification</button>
-      </div>
-    )
-  }
-}
+const App = () => (
+  <div style={{ paddingTop: 54 }}>
+    <Helmet titleTemplate={`%s | ${APP_NAME}`} defaultTitle={APP_NAME} />
+    <Notifier storeKey="common" />
+    <Switch>
+      <Route exact path={HOME} render={() => <HomePage />} />
+      <Route component={NotFoundPage} />
+    </Switch>
+  </div>
+)
 
 ReactDOM.render(
   React.createElement(App),
@@ -56,18 +57,53 @@ ReactDOM.render(
 );
 ```
 
-## Methods
+### example of dispatching actions
+```js
+import React from 'react'
+import { connect } from 'react-redux'
+import { showNotification, clearNotifications, removeNotification } from  'react-notifier-system-redux'
 
-### `showNotification(notification)` 
+const DispatchigExample = class extends React.Component<{dispatch: func}> {
+  dispatchNotificationActions() {
+      dispatch(clearNotifications())
 
-Add or update a notification object. This displays the notification based on the [object](https://github.com/igorprado/react-notification-system#creating-a-notification) you passed.
-It updates the notification if save `id`' found in current notification list, otherwise it adds this notification.
+      dispatch(showNotification({
+        message: 'Notification 1',
+        level: 'error',
+        title: 'Notification 1 Title',
+        autoDismiss: 0,
+        id: 'notification-1',
+      }))
 
-### `removeNotificationById(notificationId)`
+      dispatch(showNotification({
+        message: 'Notification 2',
+        level: 'error',
+        title: 'Notification 2 Title',
+        autoDismiss: 0,
+        id: 'notification-2',
+      }))
 
-Remove the notification by `id`.
+      dispatch(showNotification({
+        message: 'Notification New',
+        level: 'error',
+        title: 'Notification New Title',
+        autoDismiss: 0,
+      }))
 
-## Roadmap
+      // "notification-2" will never be shown as it is removed.
+      dispatch(removeNotificationById('notification-2'))
+    }
 
-* Redux implementation
+  render() {
+    return (
+      <div>
+        <button onClick={this.dispatchNotificationActions}>Dispatch Notification Actions</button>
+      </dev>
+    )
+  }
+}
 
+// connect is used to get dispatch method.
+export default connect()(DispatchigExample)
+
+```
