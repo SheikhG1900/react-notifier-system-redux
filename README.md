@@ -6,6 +6,8 @@
 
 > Indirect redux implementation of [react-notification-system](https://igorprado.github.io/react-notification-system), with edit and remove options.
 
+> The alternative of [react-notification-system-redux](https://github.com/gor181/react-notification-system-redux)
+
 <a href="https://igorprado.github.io/react-notification-system/"><img width="728" src="https://github.com/igorprado/react-notification-system/raw/master/example/src/images/screenshot.jpg" alt="Screenshot"></a>
 
 ## Installing
