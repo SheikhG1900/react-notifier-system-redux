@@ -1,6 +1,6 @@
 {
   "name": "react-notifier-system-redux",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": "sheikhG1900/react-notifier-system-redux",
   "author": "Sheikh Abdul Wahid Ahmed @sheikhG1900",
   "license": "MIT",
@@ -29,7 +29,6 @@
     "prepush-notused": "yarn lint && yarn test-flow && yarn test-jest && yarn prod:build"
   },
   "dependencies": {
-    "enzyme-adapter-react-16": "^1.1.1",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-notifier-system": "0.0.6",
@@ -53,6 +52,7 @@
     "cross-env": "^5.1.3",
     "enhanced-resolve": "^4.0.0",
     "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.16.0",
     "eslint-config-airbnb": "^16.0.0",
     "eslint-import-resolver-babel-module": "^4.0.0",

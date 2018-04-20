@@ -17,7 +17,7 @@ npm install react-notifier-system-redux
 ### redux store configuration
 ```js
 import {createStore, combineReducers} from 'redux';
-import {reducer as notifications} from 'react-notification-system-redux';
+import {reducer as notifications} from 'react-notifier-system-redux';
 
 export function configureStore(initialState = {}) {
   return createStore(
