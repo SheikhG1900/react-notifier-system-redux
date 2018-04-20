@@ -42,8 +42,8 @@ import Notifier from 'react-notifier-system-redux'
 
 const App = () => (
   <div>
-    {/* <Notifier storeKey="xyz" /> storeKey is only required when it is other then "notifications". See your store configuration */}
-    <Notifier storeKey="notifications" />
+    {/* optional property [storeKey="notifications"]. storeKey is only required when it is configured other then "notifications". See your store configuration */}
+    <Notifier />
   </div>
 )
 
