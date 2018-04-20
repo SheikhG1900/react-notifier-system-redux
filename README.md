@@ -3,6 +3,7 @@
 [![npm version](https://badge.fury.io/js/react-notifier-system-redux.svg)](https://badge.fury.io/js/react-notifier-system-redux) [![Dependency Status](https://david-dm.org/sheikhG1900/react-notifier-system-redux.svg)](https://david-dm.org/sheikhG1900/react-notifier-system-redux) [![devDependency Status](https://david-dm.org/sheikhG1900/react-notifier-system-redux/dev-status.svg)](https://david-dm.org/sheikhG1900/react-notifier-system-redux#info=devDependencies) [![Build Status](https://travis-ci.org/SheikhG1900/react-notifier-system-redux.svg?branch=master)](https://travis-ci.org/SheikhG1900/react-notifier-system-redux) [![Coverage Status](https://coveralls.io/repos/github/SheikhG1900/react-notifier-system-redux/badge.svg?branch=master)](https://coveralls.io/github/SheikhG1900/react-notifier-system-redux?branch=master)
 
 > Redux implementation of [react-notifier-system](https://github.com/sheikhG1900/react-notifier-system).
+
 > Indirect redux implementation of [react-notification-system](https://igorprado.github.io/react-notification-system), with edit and remove options.
 
 <a href="https://igorprado.github.io/react-notification-system/"><img width="728" src="https://github.com/igorprado/react-notification-system/raw/master/example/src/images/screenshot.jpg" alt="Screenshot"></a>
