@@ -38,7 +38,7 @@ For optimal appearance, this component **must be rendered on a top level HTML el
 
 ```js
 import * as React from 'react'
-import Notifier from 'react-notifier-system-redux'
+import { Notifier } from 'react-notifier-system-redux'
 
 const App = () => (
   <div>
@@ -61,6 +61,7 @@ import { showNotification, clearNotifications, removeNotification } from  'react
 
 const DispatchigExample = class extends React.Component<{dispatch: func}> {
   dispatchNotificationActions() {
+      const { dispatch } = this.props
       dispatch(clearNotifications())
 
       dispatch(showNotification({
