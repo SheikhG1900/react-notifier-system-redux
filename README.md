@@ -41,13 +41,9 @@ import * as React from 'react'
 import Notifier from 'react-notifier-system-redux'
 
 const App = () => (
-  <div style={{ paddingTop: 54 }}>
-    <Helmet titleTemplate={`%s | ${APP_NAME}`} defaultTitle={APP_NAME} />
-    <Notifier storeKey="common" />
-    <Switch>
-      <Route exact path={HOME} render={() => <HomePage />} />
-      <Route component={NotFoundPage} />
-    </Switch>
+  <div>
+    {/* <Notifier storeKey="xyz" /> storeKey is only required when it is other then "notifications". See your store configuration */}
+    <Notifier storeKey="notifications" />
   </div>
 )
 
